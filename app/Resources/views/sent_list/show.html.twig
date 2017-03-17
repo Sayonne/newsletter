@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sent_list</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ sent_list.id }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ sent_list.etat }}</td>
+            </tr>
+            <tr>
+                <th>Senddate</th>
+                <td>{% if sent_list.sendDate %}{{ sent_list.sendDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sent_list_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

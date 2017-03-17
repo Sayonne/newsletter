@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Stat</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ stat.id }}</td>
+            </tr>
+            <tr>
+                <th>Link</th>
+                <td>{{ stat.link }}</td>
+            </tr>
+            <tr>
+                <th>Originallink</th>
+                <td>{{ stat.originalLink }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ stat.etat }}</td>
+            </tr>
+            <tr>
+                <th>Changedate</th>
+                <td>{% if stat.changeDate %}{{ stat.changeDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('stats_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Newsletter</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ newsletter.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ newsletter.titre }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ newsletter.contenu }}</td>
+            </tr>
+            <tr>
+                <th>Creationdate</th>
+                <td>{% if newsletter.creationDate %}{{ newsletter.creationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Modificationdate</th>
+                <td>{% if newsletter.modificationDate %}{{ newsletter.modificationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Senddate</th>
+                <td>{% if newsletter.sendDate %}{{ newsletter.sendDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Statut</th>
+                <td>{{ newsletter.statut }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('newsletter_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
