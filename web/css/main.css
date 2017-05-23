@@ -1,7 +1,40 @@
 body {
-    margin:0;
-    padding:0;
+    margin: 0px;
+    padding: 0px;
     background: url('../img/fond.jpg') no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+nav {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 0 #000000;
+}
+
+.brand-logo {
+    margin-left: 10%;
+    font-family: 'Lobster', cursive;
+    color: #000000 !important;
+}
+
+nav ul {
+    margin-right: 10%;
+}
+
+nav ul a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: #000000 !important;
+}
+
+.important {
+    font-weight: bold;
+}
+
+.home_text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000000;
 }
