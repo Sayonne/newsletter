@@ -1,0 +1,7 @@
+body {
+    margin:0;
+    padding:0;
+    background: url('../img/fond.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
